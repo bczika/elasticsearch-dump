@@ -3,6 +3,7 @@ LABEL maintainer="ferronrsmith@gmail.com"
 ARG ES_DUMP_VER
 ENV ES_DUMP_VER=${ES_DUMP_VER:-latest}
 ENV NODE_ENV production
+ENV NODE_TLS_REJECT_UNAUTHORIZED 0
 
 RUN npm install elasticdump@${ES_DUMP_VER} -g
 
